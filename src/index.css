@@ -1,56 +1,96 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #16181F;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-body{
-  height:100dvh;
-  width: 100dvw;
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* vh is more reliable than dvh */
+    width: 100vw;  /* vw is more reliable than dvw */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-header{ 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 5px;
+#root {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: 50px 1fr 50px;
+    width: 100%;  /* Ensures it takes full width */
+    height: 100%; /* Ensures it takes full height */
 }
 
-header img{
-width: 50px;
-height: auto;
-
+header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
 }
 
-form{
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  align-items: center;
-  padding: 5px;
+header img {
+    width: 50px;
+    height: auto;
 }
 
-
-
-.flashCard{
-  width: 200px;
-  height: 180px;
-  border-radius: 20px;
-  background-color: #323949;
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-footer img{
-  width:12px;
-  height: auto;
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 5px;
+}
+.flashCards{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+.flashCard {
+    border-radius: 20px;
+    background-color: #323949;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(95% / 3);
+    padding: 2rem 0;
 }
 
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
 
+footer img {
+    width: 12px;
+}

@@ -13,5 +13,44 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body{
+  height:100dvh;
+  width: 100dvw;
+}
+
+header{ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+header img{
+width: 50px;
+height: auto;
+
+}
+
+form{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  padding: 5px;
+}
+
+
+
+.flashCard{
+  width: 200px;
+  height: 180px;
+  border-radius: 20px;
+  background-color: #323949;
+}
+
+footer img{
+  width:12px;
+  height: auto;
+}
 
 

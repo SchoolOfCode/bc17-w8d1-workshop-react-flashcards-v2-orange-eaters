@@ -25,7 +25,7 @@ body {
 #root {
     display: flex;
     flex-direction: column;
-    width: 100%;  /* Ensures it takes full width */
+    width: 100%; /* Ensures it takes full width */
     height: 100%; /* Ensures it takes full height */
     padding: 0.5rem;
 }
@@ -77,6 +77,15 @@ form {
     justify-content: center;
     padding: 2rem 0;
     flex: 1 1 auto;
+    position: relative;
+}
+
+.deleteFlashCard {
+    position: absolute;
+    display: block;
+    color: red;
+    top: 0;
+    right: 15px;
 }
 
 .flashCard:hover {

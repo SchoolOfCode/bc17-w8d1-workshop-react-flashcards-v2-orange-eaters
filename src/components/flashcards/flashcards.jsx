@@ -1,7 +1,10 @@
+import FlashCard from "./flashcard/flashcard.jsx";
 const FlashCards = () => {
     return (
         <>
-            <h2>flashcards</h2>
+            <section className="flashCards">
+                <FlashCard/>
+            </section>
         </>
     )
 }

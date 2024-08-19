@@ -1,40 +1,17 @@
+import Header from "./components/header/header.jsx";
+import Form from "./components/form/form.jsx";
+import Flashcards from "./components/flashcards/flashcards.jsx";
+import Footer from "./components/footer/footer.jsx";
+
 function App() {
-    const questions = [
-        {question: "What is React?", answer: "React is a javascript library"},
-        {question: "What is JSX?", answer: "JSX is a javascript library"},
-        {question: "What is OISHVLKNA?", answer: "JSX is a javascript library"},
-    ];
-
-
     return (
         <>
-            <header>
-                <img src="logo_dark.svg" alt="React Logo"/>
-                <h1>React Flashcards</h1>
-                <p>🧠 Expand Your React Knowledge, One Flashcard at a Time! 🐌</p>
-            </header>
+            <Header/>
             <main>
-                <form>
-                    <label>Question:</label>
-                    <input type="text"/>
-                    <label>Answer:</label>
-                    <input type="text"/>
-                    <button type="submit">Add</button>
-                </form>
-                <section className="flashCards">
-                    {questions.map((question) => {
-                        return <div className="flashCard" key={question.question}>
-                            <span className="deleteFlashCard">x</span>
-                            <p>🤔</p>
-                            <p>{question.question}</p>
-                        </div>
-                    })}
-                </section>
+                <Form/>
+                <Flashcards/>
             </main>
-            <footer>
-                <p>Build with React <img src="logo_dark.svg" alt="React Logo"/>
-                </p>
-            </footer>
+            <Footer/>
         </>
     );
 }

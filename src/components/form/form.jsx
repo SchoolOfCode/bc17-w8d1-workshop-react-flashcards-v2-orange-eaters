@@ -1,7 +1,13 @@
 const Form = () => {
     return (
         <>
-            <h2>Form</h2>
+            <form>
+                <label>Question:</label>
+                <input type="text"/>
+                <label>Answer:</label>
+                <input type="text"/>
+                <button type="submit">Add</button>
+            </form>
         </>
     )
 }

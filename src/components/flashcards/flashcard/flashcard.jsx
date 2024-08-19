@@ -1,7 +1,18 @@
 const FlashCard = () => {
+    const questions = [
+        {question: "What is React?", answer: "React is a javascript library"},
+        {question: "What is JSX?", answer: "JSX is a javascript library"},
+        {question: "What is OISHVLKNA?", answer: "JSX is a javascript library"},
+    ];
     return (
         <>
-            <h2>flashcard</h2>
+            {questions.map((question) => {
+                return <div className="flashCard" key={question.question}>
+                    <span className="deleteFlashCard">x</span>
+                    <p>🤔</p>
+                    <p>{question.question}</p>
+                </div>
+            })}
         </>
     )
 }

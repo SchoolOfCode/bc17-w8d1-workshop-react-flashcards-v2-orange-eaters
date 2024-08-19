@@ -1,16 +1,12 @@
 import Header from "./components/header/header.jsx";
-import Form from "./components/form/form.jsx";
-import Flashcards from "./components/flashcards/flashcards.jsx";
 import Footer from "./components/footer/footer.jsx";
+import Main from "./components/main/main.jsx";
 
 function App() {
     return (
         <>
             <Header/>
-            <main>
-                <Form/>
-                <Flashcards/>
-            </main>
+            <Main/>
             <Footer/>
         </>
     );

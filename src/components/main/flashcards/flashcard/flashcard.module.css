@@ -1,0 +1,31 @@
+.flashCard {
+  border-radius: 20px;
+  background-color: #323949;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  flex: 1 1 auto;
+  position: relative;
+  width: calc(95% / 3);
+  text-align: center;
+}
+
+.flashCard:hover {
+  cursor: pointer;
+  background: rgba(50, 57, 73, 0.68);
+}
+
+.deleteFlashCard {
+  font-weight: bold;
+  position: absolute;
+  display: block;
+  color: red;
+  top: 0;
+  right: 15px;
+}
+
+.deleteFlashCard:hover {
+  transform: scale(1.1);
+}

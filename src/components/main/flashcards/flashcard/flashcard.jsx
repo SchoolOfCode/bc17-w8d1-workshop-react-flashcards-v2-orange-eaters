@@ -3,12 +3,13 @@ import styles from './flashcard.module.css'
 import { useState } from 'react'
 
 const FlashCard = ({ card }) => {
+  //state
   const [flipped, setFlipped] = useState(false)
-
+//function
   const toggleCard = () => {
     setFlipped(!flipped)
   }
-
+// return
   return (
     <>
       {flipped ? (

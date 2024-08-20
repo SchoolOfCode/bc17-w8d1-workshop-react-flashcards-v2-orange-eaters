@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 import styles from './flashcards.module.css'
 import FlashCard from './flashcard/flashcard.jsx'
-const FlashCards = ({ cardData }) => {
+const FlashCards = ({ cards }) => {
   return (
     <>
       <section className={styles.flashCards}>
-        {cardData.map((card) => {
-          return <FlashCard card={card} key={card.question} />
+        {cards.map((card) => {
+          return <FlashCard key={card.question} card={card} />
         })}
       </section>
     </>
